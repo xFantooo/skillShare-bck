@@ -1,3 +1,4 @@
 .env
 .gitignore
 /database/init-skillshare.sql
+/database/seed.sql
