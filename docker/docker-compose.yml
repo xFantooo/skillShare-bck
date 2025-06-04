@@ -12,11 +12,10 @@ services:
       - MYSQL_USER=${MYSQL_USER}
       - MYSQL_PASSWORD=${MYSQL_PASSWORD}
     volumes:
-      - skillsharedb:/var/lib/mysql
-      - ./database:/docker-entrypoint-initdb.d
+      - skillshare_db:/var/lib/mysql
+      - ../database:/docker-entrypoint-initdb.d
     networks:
       - skillshare_network
-
   phpmyadmin:
     image: phpmyadmin/phpmyadmin
     container_name: shareskill_phpmyadmin
@@ -26,10 +25,10 @@ services:
     environment:
       - PMA_HOST=skillsharedb
       - PMA_PORT=${PMA_PORT}
-  depends_on:
-    - skillsharedb
-  networks:
-    - skillshare_network
+    depends_on:
+      - skillsharedb
+    networks:
+      - skillshare_network
 
   mailpit:
     image: axllent/mailpit
