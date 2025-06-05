@@ -1,0 +1,147 @@
+[Thu Jun  5 14:37:42 2025] PHP 8.4.4 Development Server (http://localhost:8000) started
+[Thu Jun  5 14:37:55 2025] [::1]:51759 Accepted
+[Thu Jun  5 14:37:55 2025] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port).
+[Thu Jun  5 14:37:55 2025] PHP Fatal error:  Uncaught ReflectionException: Class "App\controllers\ExchangeController" does not exist in D:\PROJETS\PlatformeDechange\bck\src\core\RouteResolver.php:18
+Stack trace:
+#0 D:\PROJETS\PlatformeDechange\bck\src\core\RouteResolver.php(18): ReflectionClass->__construct('App\\controllers...')
+#1 D:\PROJETS\PlatformeDechange\bck\src\core\router.php(15): App\core\RouteResolver::getRoutes()
+#2 D:\PROJETS\PlatformeDechange\bck\public\index.php(9): App\core\router->__construct()
+#3 {main}
+  thrown in D:\PROJETS\PlatformeDechange\bck\src\core\RouteResolver.php on line 18
+[Thu Jun  5 14:37:55 2025] [::1]:51759 [200]: GET / - Uncaught ReflectionException: Class "App\controllers\ExchangeController" does not exist in D:\PROJETS\PlatformeDechange\bck\src\core\RouteResolver.php:18
+Stack trace:
+#0 D:\PROJETS\PlatformeDechange\bck\src\core\RouteResolver.php(18): ReflectionClass->__construct('App\\controllers...')
+#1 D:\PROJETS\PlatformeDechange\bck\src\core\router.php(15): App\core\RouteResolver::getRoutes()
+#2 D:\PROJETS\PlatformeDechange\bck\public\index.php(9): App\core\router->__construct()
+#3 {main}
+  thrown in D:\PROJETS\PlatformeDechange\bck\src\core\RouteResolver.php on line 18
+[Thu Jun  5 14:37:55 2025] [::1]:51759 Closing
+[Thu Jun  5 14:37:55 2025] [::1]:51760 Accepted
+[Thu Jun  5 14:37:56 2025] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port).
+[Thu Jun  5 14:37:56 2025] PHP Fatal error:  Uncaught ReflectionException: Class "App\controllers\ExchangeController" does not exist in D:\PROJETS\PlatformeDechange\bck\src\core\RouteResolver.php:18
+Stack trace:
+#0 D:\PROJETS\PlatformeDechange\bck\src\core\RouteResolver.php(18): ReflectionClass->__construct('App\\controllers...')
+#1 D:\PROJETS\PlatformeDechange\bck\src\core\router.php(15): App\core\RouteResolver::getRoutes()
+#2 D:\PROJETS\PlatformeDechange\bck\public\index.php(9): App\core\router->__construct()
+#3 {main}
+  thrown in D:\PROJETS\PlatformeDechange\bck\src\core\RouteResolver.php on line 18
+[Thu Jun  5 14:37:56 2025] [::1]:51760 [200]: GET /favicon.ico - Uncaught ReflectionException: Class "App\controllers\ExchangeController" does not exist in D:\PROJETS\PlatformeDechange\bck\src\core\RouteResolver.php:18
+Stack trace:
+#0 D:\PROJETS\PlatformeDechange\bck\src\core\RouteResolver.php(18): ReflectionClass->__construct('App\\controllers...')
+#1 D:\PROJETS\PlatformeDechange\bck\src\core\router.php(15): App\core\RouteResolver::getRoutes()
+#2 D:\PROJETS\PlatformeDechange\bck\public\index.php(9): App\core\router->__construct()
+#3 {main}
+  thrown in D:\PROJETS\PlatformeDechange\bck\src\core\RouteResolver.php on line 18
+[Thu Jun  5 14:37:56 2025] [::1]:51760 Closing
+[Thu Jun  5 14:40:40 2025] [::1]:51859 Accepted
+[Thu Jun  5 14:40:40 2025] [::1]:51860 Accepted
+[Thu Jun  5 14:40:40 2025] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port).
+[Thu Jun  5 14:40:40 2025] PHP Warning:  Undefined array key 0 in D:\PROJETS\PlatformeDechange\bck\src\core\router.php on line 24
+[Thu Jun  5 14:40:40 2025] PHP Warning:  Undefined array key 1 in D:\PROJETS\PlatformeDechange\bck\src\core\router.php on line 24
+[Thu Jun  5 14:40:40 2025] PHP Fatal error:  Uncaught Error: Class name must be a valid object or a string in D:\PROJETS\PlatformeDechange\bck\src\core\router.php:25
+Stack trace:
+#0 D:\PROJETS\PlatformeDechange\bck\public\index.php(14): App\core\router->dispatch('/', 'GET')
+#1 {main}
+  thrown in D:\PROJETS\PlatformeDechange\bck\src\core\router.php on line 25
+[Thu Jun  5 14:40:40 2025] [::1]:51859 [200]: GET / - Uncaught Error: Class name must be a valid object or a string in D:\PROJETS\PlatformeDechange\bck\src\core\router.php:25
+Stack trace:
+#0 D:\PROJETS\PlatformeDechange\bck\public\index.php(14): App\core\router->dispatch('/', 'GET')
+#1 {main}
+  thrown in D:\PROJETS\PlatformeDechange\bck\src\core\router.php on line 25
+[Thu Jun  5 14:40:40 2025] [::1]:51859 Closing
+[Thu Jun  5 14:40:41 2025] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port).
+[Thu Jun  5 14:40:41 2025] PHP Fatal error:  Uncaught Exception: Route not found for GET /favicon.ico in D:\PROJETS\PlatformeDechange\bck\src\core\router.php:20
+Stack trace:
+#0 D:\PROJETS\PlatformeDechange\bck\public\index.php(14): App\core\router->dispatch('/favicon.ico', 'GET')
+#1 {main}
+  thrown in D:\PROJETS\PlatformeDechange\bck\src\core\router.php on line 20
+[Thu Jun  5 14:40:41 2025] [::1]:51860 [200]: GET /favicon.ico - Uncaught Exception: Route not found for GET /favicon.ico in D:\PROJETS\PlatformeDechange\bck\src\core\router.php:20
+Stack trace:
+#0 D:\PROJETS\PlatformeDechange\bck\public\index.php(14): App\core\router->dispatch('/favicon.ico', 'GET')
+#1 {main}
+  thrown in D:\PROJETS\PlatformeDechange\bck\src\core\router.php on line 20
+[Thu Jun  5 14:40:41 2025] [::1]:51860 Closing
+[Thu Jun  5 14:41:51 2025] [::1]:51902 Accepted
+[Thu Jun  5 14:41:51 2025] [::1]:51903 Accepted
+[Thu Jun  5 14:41:51 2025] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port).
+[Thu Jun  5 14:41:51 2025] PHP Warning:  Undefined array key 0 in D:\PROJETS\PlatformeDechange\bck\src\core\Router.php on line 24
+[Thu Jun  5 14:41:51 2025] PHP Warning:  Undefined array key 1 in D:\PROJETS\PlatformeDechange\bck\src\core\Router.php on line 24
+[Thu Jun  5 14:41:51 2025] PHP Fatal error:  Uncaught Error: Class name must be a valid object or a string in D:\PROJETS\PlatformeDechange\bck\src\core\Router.php:25
+Stack trace:
+#0 D:\PROJETS\PlatformeDechange\bck\public\index.php(14): App\core\Router->dispatch('/', 'GET')
+#1 {main}
+  thrown in D:\PROJETS\PlatformeDechange\bck\src\core\Router.php on line 25
+[Thu Jun  5 14:41:51 2025] [::1]:51902 [200]: GET / - Uncaught Error: Class name must be a valid object or a string in D:\PROJETS\PlatformeDechange\bck\src\core\Router.php:25
+Stack trace:
+#0 D:\PROJETS\PlatformeDechange\bck\public\index.php(14): App\core\Router->dispatch('/', 'GET')
+#1 {main}
+  thrown in D:\PROJETS\PlatformeDechange\bck\src\core\Router.php on line 25
+[Thu Jun  5 14:41:51 2025] [::1]:51902 Closing
+[Thu Jun  5 14:41:52 2025] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port).
+[Thu Jun  5 14:41:52 2025] PHP Fatal error:  Uncaught Exception: Route not found for GET /favicon.ico in D:\PROJETS\PlatformeDechange\bck\src\core\Router.php:20
+Stack trace:
+#0 D:\PROJETS\PlatformeDechange\bck\public\index.php(14): App\core\Router->dispatch('/favicon.ico', 'GET')
+#1 {main}
+  thrown in D:\PROJETS\PlatformeDechange\bck\src\core\Router.php on line 20
+[Thu Jun  5 14:41:52 2025] [::1]:51903 [200]: GET /favicon.ico - Uncaught Exception: Route not found for GET /favicon.ico in D:\PROJETS\PlatformeDechange\bck\src\core\Router.php:20
+Stack trace:
+#0 D:\PROJETS\PlatformeDechange\bck\public\index.php(14): App\core\Router->dispatch('/favicon.ico', 'GET')
+#1 {main}
+  thrown in D:\PROJETS\PlatformeDechange\bck\src\core\Router.php on line 20
+[Thu Jun  5 14:41:52 2025] [::1]:51903 Closing
+[Thu Jun  5 14:47:02 2025] [::1]:52105 Accepted
+[Thu Jun  5 14:47:02 2025] [::1]:52106 Accepted
+[Thu Jun  5 14:47:02 2025] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port).
+[Thu Jun  5 14:47:02 2025] PHP Warning:  Undefined array key 0 in D:\PROJETS\PlatformeDechange\bck\src\core\Router.php on line 24
+[Thu Jun  5 14:47:02 2025] PHP Warning:  Undefined array key 1 in D:\PROJETS\PlatformeDechange\bck\src\core\Router.php on line 24
+[Thu Jun  5 14:47:02 2025] PHP Fatal error:  Uncaught Error: Class name must be a valid object or a string in D:\PROJETS\PlatformeDechange\bck\src\core\Router.php:25
+Stack trace:
+#0 D:\PROJETS\PlatformeDechange\bck\public\index.php(14): App\core\Router->dispatch('/', 'GET')
+#1 {main}
+  thrown in D:\PROJETS\PlatformeDechange\bck\src\core\Router.php on line 25
+[Thu Jun  5 14:47:02 2025] [::1]:52105 [200]: GET / - Uncaught Error: Class name must be a valid object or a string in D:\PROJETS\PlatformeDechange\bck\src\core\Router.php:25
+Stack trace:
+#0 D:\PROJETS\PlatformeDechange\bck\public\index.php(14): App\core\Router->dispatch('/', 'GET')
+#1 {main}
+  thrown in D:\PROJETS\PlatformeDechange\bck\src\core\Router.php on line 25
+[Thu Jun  5 14:47:02 2025] [::1]:52105 Closing
+[Thu Jun  5 14:47:03 2025] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port).
+[Thu Jun  5 14:47:03 2025] PHP Fatal error:  Uncaught Exception: Route not found for GET /favicon.ico in D:\PROJETS\PlatformeDechange\bck\src\core\Router.php:20
+Stack trace:
+#0 D:\PROJETS\PlatformeDechange\bck\public\index.php(14): App\core\Router->dispatch('/favicon.ico', 'GET')
+#1 {main}
+  thrown in D:\PROJETS\PlatformeDechange\bck\src\core\Router.php on line 20
+[Thu Jun  5 14:47:03 2025] [::1]:52106 [200]: GET /favicon.ico - Uncaught Exception: Route not found for GET /favicon.ico in D:\PROJETS\PlatformeDechange\bck\src\core\Router.php:20
+Stack trace:
+#0 D:\PROJETS\PlatformeDechange\bck\public\index.php(14): App\core\Router->dispatch('/favicon.ico', 'GET')
+#1 {main}
+  thrown in D:\PROJETS\PlatformeDechange\bck\src\core\Router.php on line 20
+[Thu Jun  5 14:47:03 2025] [::1]:52106 Closing
+[Thu Jun  5 15:16:59 2025] [::1]:53160 Accepted
+[Thu Jun  5 15:16:59 2025] [::1]:53161 Accepted
+[Thu Jun  5 15:17:00 2025] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port).
+[Thu Jun  5 15:17:00 2025] PHP Warning:  Undefined array key 0 in D:\PROJETS\PlatformeDechange\bck\src\core\Router.php on line 24
+[Thu Jun  5 15:17:00 2025] PHP Warning:  Undefined array key 1 in D:\PROJETS\PlatformeDechange\bck\src\core\Router.php on line 24
+[Thu Jun  5 15:17:00 2025] PHP Fatal error:  Uncaught Error: Class name must be a valid object or a string in D:\PROJETS\PlatformeDechange\bck\src\core\Router.php:25
+Stack trace:
+#0 D:\PROJETS\PlatformeDechange\bck\public\index.php(14): App\core\Router->dispatch('/', 'GET')
+#1 {main}
+  thrown in D:\PROJETS\PlatformeDechange\bck\src\core\Router.php on line 25
+[Thu Jun  5 15:17:00 2025] [::1]:53160 [200]: GET / - Uncaught Error: Class name must be a valid object or a string in D:\PROJETS\PlatformeDechange\bck\src\core\Router.php:25
+Stack trace:
+#0 D:\PROJETS\PlatformeDechange\bck\public\index.php(14): App\core\Router->dispatch('/', 'GET')
+#1 {main}
+  thrown in D:\PROJETS\PlatformeDechange\bck\src\core\Router.php on line 25
+[Thu Jun  5 15:17:00 2025] [::1]:53160 Closing
+[Thu Jun  5 15:17:00 2025] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port).
+[Thu Jun  5 15:17:00 2025] PHP Fatal error:  Uncaught Exception: Route not found for GET /favicon.ico in D:\PROJETS\PlatformeDechange\bck\src\core\Router.php:20
+Stack trace:
+#0 D:\PROJETS\PlatformeDechange\bck\public\index.php(14): App\core\Router->dispatch('/favicon.ico', 'GET')
+#1 {main}
+  thrown in D:\PROJETS\PlatformeDechange\bck\src\core\Router.php on line 20
+[Thu Jun  5 15:17:00 2025] [::1]:53161 [200]: GET /favicon.ico - Uncaught Exception: Route not found for GET /favicon.ico in D:\PROJETS\PlatformeDechange\bck\src\core\Router.php:20
+Stack trace:
+#0 D:\PROJETS\PlatformeDechange\bck\public\index.php(14): App\core\Router->dispatch('/favicon.ico', 'GET')
+#1 {main}
+  thrown in D:\PROJETS\PlatformeDechange\bck\src\core\Router.php on line 20
+[Thu Jun  5 15:17:00 2025] [::1]:53161 Closing

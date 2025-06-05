@@ -2,3 +2,5 @@
 .gitignore
 /database/init-skillshare.sql
 /database/seed.sql
+/vendor
+/composer.lock
