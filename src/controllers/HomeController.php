@@ -8,7 +8,7 @@ use App\core\attributes\Route;
 
 class HomeController
 {
-    #[Route('/test', 'GET')]
+    #[Route('/', 'GET')]
     function homeView()
     {
         echo "Welcome to the Home Page!";
