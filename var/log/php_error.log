@@ -1,0 +1,2 @@
+[Tue Jun 10 09:03:24 2025] PHP Warning:  PHP Startup: Unable to load dynamic library 'xdebug' (tried: D:\EnvDev\PHP_8_4_4\ext\xdebug (Le module spécifié est introuvable), D:\EnvDev\PHP_8_4_4\ext\php_xdebug.dll (Le module spécifié est introuvable)) in Unknown on line 0
+[Tue Jun 10 09:03:24 2025] PHP 8.4.4 Development Server (http://localhost:8000) started
