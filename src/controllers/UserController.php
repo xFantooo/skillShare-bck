@@ -45,6 +45,16 @@ class UserController
         $data = json_decode(file_get_contents('php://input'), true );
         if (!$data) throw  new \Exception('Invalid JSON data');
 
+        $userRepository = new UserRepository;
+
+             if ($userRepository->findUserByUsername($data['username']) && $userRepository->findUserByEmail($data['email'])) {
+                throw new Exception("An account has already been created with this username and this adress email .");
+            } elseif ($userRepository->findUserByEmail($data['email'])) {
+                throw new Exception('This Email is already Used !');
+            } elseif ($userRepository->findUserByUsername($data['username'])) {
+                throw new Exception("This username is alreasy Used !");
+            };
+        
 
         $emailToken = bin2hex(random_bytes(32));
 
@@ -64,7 +74,7 @@ class UserController
         //création user 
         $user = new User($userData);
         $user->setCreatedAt((new DateTime())->format('Y-m-d H:i:s'));
-        $userRepository = new UserRepository();
+        
         $saved = $userRepository->save($user);
 
 

@@ -38,7 +38,7 @@ class MailService
                                     <p>If the button above doesn't work, copy and paste the following link into your browser:</p>
                                     <p style='word-break: break-all; color: #555;'>{$link}</p>
                                     <p>If you didn’t create this account, you can safely ignore this email.</p>
-                                    <p style='margin-bottom: 0;'>Warm regards,<br>The ShareSkill Team</p>
+                                    <p style='margin-bottom: 0;'>Warm regards,<br>The SkillShare Team</p>
                                 </td>
                             </tr>
                             <tr>

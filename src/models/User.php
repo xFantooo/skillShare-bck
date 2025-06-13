@@ -11,20 +11,20 @@ class User
     private array $role = ["ROLE_USER"];
     private string $password;
     private string $created_at;
-    private string $email_token;
+    private ?string $email_token;
     private bool $is_verified;
     private string $verified_at;
 
 
 
-    public function __construct(array $data = [])
+    public function __construct(array $data)
     {
        
         $this->username = $data['username'] ?? '';
         
         $this->email = $data['email'] ?? '';
         
-        $this->password = $data['password_hash'] ?? '';
+        $this->password = $data['password'] ?? '';
 
         $this->avatar = $data['avatar'] ?? $this->avatar;
         $this->email_token = $data['email_token'] ;
@@ -53,8 +53,8 @@ class User
     public function getRole(): array { return $this->role; }
     public function setRole(array $role): self { $this->role = $role; return $this; }
 
-    public function getPasswordHash(): string { return $this->password; }
-    public function setPasswordHash(string $passwordHash): self { $this->password = $passwordHash; return $this; }
+    public function getPassword(): string { return $this->password; }
+    public function setPassword(string $passwordHash): self { $this->password = $passwordHash; return $this; }
 
    
 
@@ -63,7 +63,7 @@ class User
 
     
 
-    public function getEmailToken(): string { return $this->email_token; }
+    public function getEmailToken(): ?string { return $this->email_token; }
     public function setEmailToken(?string $email_token): self { $this->email_token = $email_token; return $this; }
 
     public function getIsVerified(): bool { return $this->is_verified; }
