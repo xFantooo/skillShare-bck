@@ -8,6 +8,7 @@ use App\core\attributes\Route;
 use App\repository\UserRepository;
 use DateTime;
 use App\services\FileUploadService;
+use App\services\JWTService;
 use App\services\MailService;
 
 class UserController
@@ -38,6 +39,51 @@ class UserController
         }
     }
 
+
+       #[Route('/api/login', 'POST')] 
+       public function login()
+       {
+        try {
+        $data = json_decode(file_get_contents('php://input'), true );
+        if (!$data) throw  new \Exception('Invalid JSON data');
+
+        $userRepository = new UserRepository();
+        $user = $userRepository->findUserByEmail($data['email']);
+        if(!$user) throw new \Exception('Email or password incorrect !');
+        if (!password_verify($data['password'], $user->getPassword())) throw new \Exception('Email or password is incorrect');
+        if(!$user->getIsVerified()) throw new \Exception('Please make sure your email is verified before trying to log in');
+
+            //génerer le token  JWT
+            $token = JWTService::generate([
+                "id_user" => $user->getId(),
+                "role" => $user->getRole(),
+                "email" =>$user->getEmail()
+            ]);
+
+
+        
+
+
+        echo json_encode([
+
+            'success' => true, 
+            'token' => $token,
+            'user' => [
+            'avatar' => $user->getAvatar(),
+            'username' => $user->getUsername()
+
+            ]
+        ]);
+
+        } catch (\Exception $e) {
+        error_log('Error in UserController::login: ' . $e->getMessage());
+        http_response_code(400);
+        echo json_encode(['success' => false, 'error' =>  $e->getMessage()]);
+       }
+
+       }
+
+
     #[Route('/api/register', 'POST')]
     public function register()
     {
@@ -46,6 +92,7 @@ class UserController
         if (!$data) throw  new \Exception('Invalid JSON data');
 
         $userRepository = new UserRepository;
+
 
              if ($userRepository->findUserByUsername($data['username']) && $userRepository->findUserByEmail($data['email'])) {
                 throw new Exception("An account has already been created with this username and this adress email .");

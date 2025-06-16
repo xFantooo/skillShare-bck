@@ -28,7 +28,7 @@ class User
 
         $this->avatar = $data['avatar'] ?? $this->avatar;
         $this->email_token = $data['email_token'] ;
-        $this->is_verified = isset($data['is_verifier']) ? (bool)$data['is_verifier'] : false;
+        $this->is_verified = isset($data['is_verified']) ? (bool)$data['is_verified'] : false;
         
     }
 
