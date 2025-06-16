@@ -67,7 +67,7 @@ class UserRepository
         return $user;
     }
 
-    public function findUserByToken($token): User {
+    public function findUserByToken($token): ?User {
         $stmt = $this->pdo->prepare("SELECT * FROM `user` WHERE email_token = ?");
         $stmt->execute([$token]);
         $data = $stmt->fetch();
