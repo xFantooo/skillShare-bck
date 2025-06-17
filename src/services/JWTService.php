@@ -27,6 +27,7 @@ class JWTService
         ];
         // payload avec expiration 24H
         $payload['exp'] = time() + (24 * 60 *60);
+            //   $payload['exp'] = time() + (30);// test 30sec 
 
         // Encoder Header et payload 
         $base64Header = self::base64url_encode(json_encode($header));
@@ -48,7 +49,7 @@ class JWTService
         
         
         
-        return $base64Header . '-' . $base64Payload . '-' . $base64Signature; 
+        return $base64Header . '.' . $base64Payload . '.' . $base64Signature; 
 
     }
     private static function base64url_encode(string $data): string {
