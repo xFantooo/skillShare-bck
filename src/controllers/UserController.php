@@ -168,4 +168,46 @@ class UserController
         echo json_encode(['success' => false, 'error' =>  $e->getMessage()]);
         }
     }
+
+
+     #[Route('/api/user/update', 'POST')]
+     public function updateProfil() {
+         try {
+
+        $data = json_decode(file_get_contents('php://input'), true );
+        if (!$data) throw  new \Exception('Invalid JSON data');
+        $userRepository = new UserRepository;
+
+        // Récupération token
+
+        $token = str_replace('Bearer ', '', $_SERVER['HTTP_AUTHORIZATION'] ?? '');
+        if (!$token) throw new \Exception('Not authorized'); //TODO a regler 
+
+
+            // Appel du service JWT pour vérifier le token 
+        $verifToken = JWTService::verify($token);
+
+         if (!$token) throw new \Exception('Token invalid');
+
+         $user = $userRepository->findUserById($verifToken['id_user']);
+          if (!$user) throw new \Exception('User not found');
+
+          // Mettre à jour les infos utilisateurs 
+          if (isset($data['username'])) $user->setUsername($data['username']);
+
+          // si autres champs à modifier 
+        //   if (isset($data['firstname'])) $user->setFirstname($data['firstname']); // exemple pour autre champs ici on modifie tous les champs modifiable  
+        $updated = $userRepository->update($user);
+
+        if(!$updated) throw new \Exception('Error during the update of user in the BDD');
+        echo json_encode(['success' => true, 'message' => 'Profil up to date' . json_encode($data)]);
+
+
+     } catch (\Exception $e) {
+        error_log('Error updateProfil ' . $e->getMessage());
+        http_response_code(400);
+        echo json_encode(['success' => false, 'error' =>  $e->getMessage()]);
+       }
+
+     }
 }
